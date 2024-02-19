@@ -1,0 +1,14 @@
+<h1>Add Reclamation</h1>
+<div class="container" >
+    <form #f="ngForm" (ngSubmit)="handleSubmit(f)">
+      <label for="title">Reclamation Title</label>
+      <input ngModel required type="text" class="form-control" id="title" name="title" placeholder="Reclamation Title">
+    
+      <label for="description">Description</label>
+      <input ngModel type="text" class="form-control" id="description" name="description" placeholder="Description">
+    
+      <button type="submit" class="btn btn-primary">
+        Add Reclamation
+      </button> 
+    </form>
+    </div>

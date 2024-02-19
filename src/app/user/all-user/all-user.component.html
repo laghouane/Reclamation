@@ -1,0 +1,108 @@
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  "
+>
+  <h1>all User</h1>
+
+
+  <div class="table-responsive" style="padding: 2rem; width: 58rem">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">firstName</th>
+          <th scope="col">lastName</th>
+          <th scope="col">email </th>
+          <th scope="col">job Position</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let user of _service.user">
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.jobPosition }}</td>
+          <td>
+            <a
+              href=""
+              class="btn btn-primary btn-sm"
+              ><i class="far fa-eye"></i> View Details</a
+            >
+            <!-- View details button -->
+            <button
+              type="button"
+              class="btn btn-danger btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target=""
+            >
+              <i class="fas fa-trash-alt"></i> Delete
+            </button>
+            <a
+              href=""
+              class="btn btn-warning btn-sm"
+              ><i class="fas fa-edit"></i> Edit</a
+            >
+          </td>
+        </tr>
+        <!-- Delete confirmation modal for each product -->
+        <div
+          class="modal fade"
+          id=""
+          tabindex="-1"
+          aria-labelledby=""
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5
+                  class="modal-title"
+                  id=""
+                >
+                  Confirm Delete
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                Are you sure you want to delete xxx?
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <form
+                  action=""
+                  method="post"
+                  style="display: inline"
+                >
+                  
+                  <input type="hidden" name="confirm_delete" value="1" />
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <h1>Reclamations not found! We have 0 Reclamations on the database</h1>
+  
+</div>

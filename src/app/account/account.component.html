@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Mon Compte</h2>
+    
+    <!-- Informations sur l'utilisateur -->
+    <div>
+      <!-- <h3>Informations Personnelles</h3>
+      <p>FirstName: {{ user.firstName }}</p>
+      <p>LastName: {{ user.lastName }}</p>
+      <p>Email: {{ user.email }}</p>
+      <p>Job Position: {{ user.jobPosition }}</p>
+      <p>Grade: {{ user.grade }}</p> -->
+
+      <!-- Autres informations sur l'utilisateur -->
+    </div>
+    
+    <!-- Modifier les informations -->
+    <div>
+      <h3>Update Informations</h3>
+      <!-- Formulaire pour mettre à jour les informations -->
+      <form #f="ngForm" (ngSubmit)="updateProfile(f)">
+        <label for="firstName">FirstName:</label>
+        <input type="text" id="firstName" name="firstName" ngModel>
+        <label for="lastName">LastName:</label>
+        <input type="text" id="lastName" name="lastName" ngModel>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel>
+        <label for="jobPosition">Job Position:</label>
+        <input type="text" id="jobPosition" name="jobPosition" ngModel>
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" name="grade" ngModel>
+        <label for="currentPassword">Mot de Passe Actuel:</label>
+        <input type="password" id="currentPassword" name="currentPassword" ngModel>
+        <label for="newPassword">Nouveau Mot de Passe:</label>
+        <input type="password" id="newPassword" name="newPassword" ngModel>
+        <button type="submit">Update</button>
+      </form>
+    </div>
+    
+  
+    
+    <!-- Déconnexion -->
+    <div>
+      <button (click)="logout()">Logout</button>
+    </div>
+  </div>

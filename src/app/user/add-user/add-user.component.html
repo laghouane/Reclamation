@@ -1,0 +1,27 @@
+<h1>Add User</h1>
+<div class="container" >
+    <form #f="ngForm" (ngSubmit)="handleSubmit(f)">
+      <label for="firstName">First Name</label>
+      <input ngModel required type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+      
+      <label for="lastName">Last Name</label>
+      <input ngModel required type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+    
+      <label for="email">E-mail</label>
+      <input ngModel type="text" class="form-control" id="email" name="email" placeholder="E-mail">
+    
+     
+      <label for="phoneNumber">Phone Number</label>
+      <input ngModel required type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+      <label for="jobPosition">Job Position</label>
+      <input ngModel required type="text" class="form-control" id="jobPosition" name="jobPosition" placeholder="Job Position">
+      <label for="grade">Grade</label>
+      <input ngModel required type="text" class="form-control" id="grade" name="grade" placeholder="Grade">
+      <label for="password">Password</label>
+      <input ngModel required type="text" class="form-control" id="password" name="password" placeholder="Password">
+    
+      <button type="submit" class="btn btn-primary">
+        Add User
+      </button> 
+    </form>
+    </div>
